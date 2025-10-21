@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio - Dark Edition</title>
+    <meta name="description" content="Minimalist portfolio showcasing creative work with dark aesthetic">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0a0a0a;
+            color: #e5e5e5;
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 20px 0;
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Space Mono', monospace;
+            font-size: 18px;
+            font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        /* Navigation */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+        }
+
+        nav a {
+            color: #888;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        nav a::before {
+            content: '// ';
+            opacity: 0.5;
+        }
+
+        /* Main Content */
+        main {
+            margin-top: 100px;
+            padding: 40px 0;
+        }
+
+        .intro-section {
+            text-align: center;
+            padding: 80px 0 120px;
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        .intro-title {
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            font-weight: 300;
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffffff 0%, #888 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .intro-subtitle {
+            font-size: 18px;
+            color: #666;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Portfolio Grid */
+        .portfolio-section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+            text-align: center;
+            color: #888;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .portfolio-item {
+            background-color: #111;
+            border: 1px solid #1a1a1a;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            aspect-ratio: 16/10;
+        }
+
+        .portfolio-item:hover {
+            border-color: #333;
+            transform: translateY(-5px);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-item-info {
+            padding: 20px;
+            background-color: #0f0f0f;
+        }
+
+        .portfolio-item-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #ffffff;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .portfolio-item-category {
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Categories Section */
+        .categories-section {
+            padding: 80px 0;
+            border-top: 1px solid #1a1a1a;
+            text-align: center;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .category-item {
+            padding: 40px 20px;
+            background-color: #111;
+            border: 1px solid #1a1a1a;
+            text-decoration: none;
+            color: #888;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        .category-item:hover {
+            color: #ffffff;
+            border-color: #333;
+            background-color: #151515;
+        }
+
+        /* Footer */
+        footer {
+            padding: 80px 0;
+            border-top: 1px solid #1a1a1a;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            font-size: 14px;
+            color: #666;
+            text-decoration: none;
+            line-height: 1.8;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            padding-top: 40px;
+            border-top: 1px solid #1a1a1a;
+            font-size: 12px;
+            color: #444;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 20px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .intro-section {
+                padding: 60px 0 80px;
+            }
+        }
+
+        /* Loading Animation */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #333, #666);
+            z-index: 1001;
+            transition: width 0.1s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+    
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">PORTFOLIO</a>
+                <nav>
+                    <ul>
+                        <li><a href="#work">Work</a></li>
+                        <li><a href="#motion">Motion</a></li>
+                        <li><a href="#static">Static</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro-section fade-in">
+            <div class="container">
+                <h1 class="intro-title">Creative Vision</h1>
+                <p class="intro-subtitle">Digital Art & Motion Design</p>
+            </div>
+        </section>
+
+        <section class="portfolio-section" id="work">
+            <div class="container">
+                <h2 class="section-title">Featured Work</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item fade-in">
+                        <img src="assets/portfolio-creature-BscEAkZG.jpg" alt="3D Creature Design">
+                        <div class="portfolio-item-info">
+                            <h3 class="portfolio-item-title">Creature Design</h3>
+                            <p class="portfolio-item-category">3D Modeling</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in">
+                        <img src="assets/portfolio-house-CMIevJ2u.jpg" alt="Architectural Visualization">
+                        <div class="portfolio-item-info">
+                            <h3 class="portfolio-item-title">Modern Architecture</h3>
+                            <p class="portfolio-item-category">Visualization</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in">
+                        <img src="assets/portfolio-portrait-Ong92Nzu.jpg" alt="Portrait Art">
+                        <div class="portfolio-item-info">
+                            <h3 class="portfolio-item-title">Digital Portrait</h3>
+                            <p class="portfolio-item-category">Character Art</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item fade-in">
+                        <img src="assets/portfolio-info-BbHmDWJf.jpg" alt="Information Design">
+                        <div class="portfolio-item-info">
+                            <h3 class="portfolio-item-title">Info Graphics</h3>
+                            <p class="portfolio-item-category">Data Visualization</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories-section" id="categories">
+            <div class="container">
+                <h2 class="section-title">Explore Categories</h2>
+                <div class="categories-grid">
+                    <a href="#" class="category-item fade-in" id="motion">
+                        Motion Graphics
+                    </a>
+                    <a href="#" class="category-item fade-in" id="static">
+                        Static Design
+                    </a>
+                    <a href="#" class="category-item fade-in">
+                        3D Modeling
+                    </a>
+                    <a href="#" class="category-item fade-in">
+                        Visualization
+                    </a>
+                    <a href="#" class="category-item fade-in">
+                        Branding
+                    </a>
+                    <a href="#" class="category-item fade-in">
+                        Experiential
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section" id="about">
+                    <h3>About</h3>
+                    <p>Creative professional specializing in digital art, motion design, and visual storytelling. Passionate about pushing the boundaries of visual communication.</p>
+                </div>
+                <div class="footer-section" id="services">
+                    <h3>Services</h3>
+                    <p><a href="#">Motion Graphics</a></p>
+                    <p><a href="#">3D Visualization</a></p>
+                    <p><a href="#">Brand Design</a></p>
+                    <p><a href="#">Digital Art</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><a href="mailto:hello@portfolio.com">hello@portfolio.com</a></p>
+                    <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                    <p><a href="#">LinkedIn</a></p>
+                    <p><a href="#">Instagram</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Creative Portfolio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll indicator
+        window.addEventListener('scroll', () => {
+            const scrollIndicator = document.getElementById('scrollIndicator');
+            const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+            scrollIndicator.style.width = scrollPercent + '%';
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = Math.random() * 0.3 + 's';
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all portfolio items and category items
+        document.querySelectorAll('.portfolio-item, .category-item').forEach((item) => {
+            observer.observe(item);
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Portfolio item click handlers
+        document.querySelectorAll('.portfolio-item').forEach(item => {
+            item.addEventListener('click', () => {
+                // Add your project detail page navigation here
+                console.log('Portfolio item clicked:', item.querySelector('.portfolio-item-title').textContent);
+            });
+        });
+    </script>
+</body>
+</html>
