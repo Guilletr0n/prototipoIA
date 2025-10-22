@@ -1,28 +1,239 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Creative Portfolio - 3D Artist & Director</title>
-    <meta name="description" content="Lorem ipsum" />
-    <meta name="author" content="Creative Portfolio" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio - Dark Edition</title>
+    <meta name="description" content="Minimalist portfolio showcasing creative work with dark aesthetic">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="styles/index.css" rel="stylesheet">
+</head>
+<body>
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+    
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">Manuel Domínguez</a>
+                
+                <!-- Desktop Navigation -->
+                <nav>
+                    <ul>
+                        <li><a href="#work">Work</a></li>
+                        <li><a href="#motion">Motion</a></li>
+                        <li><a href="#static">Static</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
 
-    <meta property="og:title" content="Creative Portfolio - 3D Artist & Director" />
-    <meta property="og:description" content="Award-winning 3D artist and creative director" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+                <!-- Burger Menu Button -->
+                <div class="burger-menu" id="burgerMenu">
+                    <div class="burger-line"></div>
+                    <div class="burger-line"></div>
+                    <div class="burger-line"></div>
+                </div>
+            </div>
+        </div>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@creative_portfolio" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-    <script type="module" crossorigin src="/assets/index-DgimBqxq.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-C2XQODqt.css">
-  </head>
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+            <ul>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#motion">Motion</a></li>
+                <li><a href="#static">Static</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
 
-  <body>
-    <div id="root"></div>
-  </body>
+    <main>
+        <section class="intro-section fade-in">
+            <div class="container">
+                <h1 class="intro-title">Creative Vision</h1>
+                <p class="intro-subtitle">Digital Art & Motion Design</p>
+            </div>
+        </section>
+
+        <section class="portfolio-section" id="work">
+            <div class="container">
+                <h2 class="section-title">Featured Work</h2>
+                <div class="portfolio-grid">
+                    <a href="project-creature.html" class="portfolio-item fade-in">
+                        <img src="assets/portfolio-creature-BscEAkZG.jpg" alt="3D Creature Design">
+                        <div class="portfolio-item-info">
+                            <h3 class="portfolio-item-title">Creature Design</h3>
+                            <p class="portfolio-item-category">3D Modeling</p>
+                        </div>
+                    </a>
+                    <a href="project-architecture.html" class="portfolio-item fade-in">
+                        <img src="assets/portfolio-house-CMIevJ2u.jpg" alt="Architectural Visualization">
+                        <div class="portfolio-item-info">
+                            <h3 class="portfolio-item-title">Modern Architecture</h3>
+                            <p class="portfolio-item-category">Visualization</p>
+                        </div>
+                    </a>
+                    <a href="project-portrait.html" class="portfolio-item fade-in">
+                        <img src="assets/portfolio-portrait-Ong92Nzu.jpg" alt="Portrait Art">
+                        <div class="portfolio-item-info">
+                            <h3 class="portfolio-item-title">Digital Portrait</h3>
+                            <p class="portfolio-item-category">Character Art</p>
+                        </div>
+                    </a>
+                    <a href="project-infographic.html" class="portfolio-item fade-in">
+                        <img src="assets/portfolio-info-BbHmDWJf.jpg" alt="Information Design">
+                        <div class="portfolio-item-info">
+                            <h3 class="portfolio-item-title">Info Graphics</h3>
+                            <p class="portfolio-item-category">Data Visualization</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories-section" id="categories">
+            <div class="container">
+                <h2 class="section-title">Explore Categories</h2>
+                <div class="categories-grid">
+                    <a href="#" class="category-item fade-in" id="motion">
+                        Motion Graphics
+                    </a>
+                    <a href="#" class="category-item fade-in" id="static">
+                        Static Design
+                    </a>
+                    <a href="#" class="category-item fade-in">
+                        3D Modeling
+                    </a>
+                    <a href="#" class="category-item fade-in">
+                        Visualization
+                    </a>
+                    <a href="#" class="category-item fade-in">
+                        Branding
+                    </a>
+                    <a href="#" class="category-item fade-in">
+                        Experiential
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section" id="about">
+                    <h3>About</h3>
+                    <p>Creative professional specializing in digital art, motion design, and visual storytelling. Passionate about pushing the boundaries of visual communication.</p>
+                </div>
+                <div class="footer-section" id="services">
+                    <h3>Services</h3>
+                    <p><a href="#">Motion Graphics</a></p>
+                    <p><a href="#">3D Visualization</a></p>
+                    <p><a href="#">Brand Design</a></p>
+                    <p><a href="#">Digital Art</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><a href="mailto:hello@portfolio.com">hello@portfolio.com</a></p>
+                    <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                    <p><a href="#">LinkedIn</a></p>
+                    <p><a href="#">Instagram</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Creative Portfolio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Burger menu functionality
+        const burgerMenu = document.getElementById('burgerMenu');
+        const mobileNav = document.getElementById('mobileNav');
+        
+        burgerMenu.addEventListener('click', () => {
+            burgerMenu.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : 'auto';
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                burgerMenu.classList.remove('active');
+                mobileNav.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!burgerMenu.contains(e.target) && !mobileNav.contains(e.target)) {
+                burgerMenu.classList.remove('active');
+                mobileNav.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close mobile menu on window resize to desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                burgerMenu.classList.remove('active');
+                mobileNav.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Scroll indicator
+        window.addEventListener('scroll', () => {
+            const scrollIndicator = document.getElementById('scrollIndicator');
+            const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+            scrollIndicator.style.width = scrollPercent + '%';
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = Math.random() * 0.3 + 's';
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all portfolio items and category items
+        document.querySelectorAll('.portfolio-item, .category-item').forEach((item) => {
+            observer.observe(item);
+        });
+
+        // Smooth scrolling for all navigation links (desktop and mobile)
+        document.querySelectorAll('nav a, .mobile-nav a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Portfolio items are now handled by native link navigation
+        // No additional JavaScript needed for navigation
+    </script>
+</body>
 </html>
