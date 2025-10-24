@@ -158,5 +158,21 @@
   </div>
 </footer>
 
+<script>
+  const fadeEl = document.getElementById('scrollFade');
+
+  window.addEventListener('scroll', () => {
+    const rect = fadeEl.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    // Cuando la frase entra en el 75% inferior de la pantalla
+    if (rect.top < windowHeight * 0.75) {
+      fadeEl.classList.add('visible');
+    } else {
+      fadeEl.classList.remove('visible');
+    }
+  });
+</script>
+
 </body>
 </html>
