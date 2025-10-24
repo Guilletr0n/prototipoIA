@@ -444,3 +444,11 @@ footer {
 html {
   scroll-behavior: smooth;
 }
+
+#scrollFade {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+#scrollFade.visible {
+  opacity: 1;
+}
