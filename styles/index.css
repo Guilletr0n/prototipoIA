@@ -402,7 +402,6 @@ footer {
   padding: 0 40px;
   z-index: 1000;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
