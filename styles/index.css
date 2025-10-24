@@ -69,9 +69,11 @@ nav {
 }
 
 nav ul {
-  list-style: none;
   display: flex;
-  gap: 40px;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
 }
 
 nav a {
