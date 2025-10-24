@@ -407,10 +407,11 @@ footer {
 
 .top-nav .logo {
   font-family: "Space Mono", monospace;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
   color: white;
   text-decoration: none;
-  letter-spacing: 1px;
+  
 }
 
 .top-nav nav ul {
@@ -418,6 +419,8 @@ footer {
   display: flex;
   gap: 30px;
   margin: 0;
+  padding: 0;
+
 }
 
 .top-nav nav a {
