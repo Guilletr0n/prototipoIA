@@ -90,26 +90,31 @@ nav a:hover {
   opacity: 0.8;
 }
 
-/* === HERO CONTENT === */
+/* ===== TEXTO SOBRE VIDEO ===== */
 .hero-content {
   position: relative;
-  z-index: 1;
-  text-align: center;
+  z-index: 10;
   color: white;
+  text-align: center;
   top: 50%;
   transform: translateY(-50%);
-  font-family: 'Helvetica Neue', sans-serif;
+  opacity: 0.6;
 }
 
 .hero-content h1 {
-  font-size: clamp(2rem, 6vw, 4rem);
-  margin-bottom: 0.5em;
+  font-family: "Inter", sans-serif;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  opacity: 0.5;
+  shadow: 0.3;
 }
 
 .hero-content p {
-  font-size: clamp(1rem, 2vw, 1.4rem);
-  opacity: 0.9;
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  opacity: 0.01;
 }
+
 
 /* === SCROLL INDICATOR === */
 .scroll-indicator {
@@ -464,27 +469,3 @@ footer {
   z-index: -1;
 }
 
-/* ===== TEXTO SOBRE VIDEO ===== */
-.hero-content {
-  position: relative;
-  z-index: 10;
-  color: white;
-  text-align: center;
-  top: 50%;
-  transform: translateY(-50%);
-  opacity: 0.6;
-}
-
-.hero-content h1 {
-  font-family: "Inter", sans-serif;
-  font-size: 3rem;
-  margin-bottom: 10px;
-  opacity: 0.5;
-  shadow: 0.3;
-}
-
-.hero-content p {
-  font-family: "Inter", sans-serif;
-  font-size: 1.2rem;
-  opacity: 0.01;
-}
