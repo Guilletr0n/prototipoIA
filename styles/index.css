@@ -38,59 +38,51 @@ body {
   z-index: 0;
 }
 
-/* === NAVBAR === */
-.navbar {
-  position: absolute;
+/* ===== MENÚ NEGRO FIJO ===== */
+.top-nav {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 2rem 4rem;
+  height: 80px;
+  background: #000; /* Fondo negro sólido */
+  padding: 0 40px;
+  z-index: 1000;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  z-index: 2;
-  background: transparent;
 }
 
-.logo {
-  font-family: 'Space Mono', monospace;
-  font-size: 18px;
+.top-nav .logo {
+  font-family: "Space Mono", monospace;
+  font-size: 1.5rem;
   font-weight: 700;
-  color: #ffffff;
+  color: white;
   text-decoration: none;
-  letter-spacing: 2px;
-  z-index: 3;
-  position: relative;
+  
 }
 
-/* NAV DESKTOP */
-nav {
-  position: relative;
-}
-
-nav ul {
-  display: flex;
+.top-nav nav ul {
   list-style: none;
+  display: flex;
   gap: 30px;
   margin: 0;
   padding: 0;
+
 }
 
-nav a {
-  color: #fff;
+.top-nav nav a {
+  color: white;
   text-decoration: none;
-  font-size: 14px;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: opacity 0.3s ease, color 0.3s ease;
-  display: block;
-  padding: 10px 0;
+  transition: opacity 0.3s;
 }
 
-nav a:hover {
-  opacity: 0.8;
+.top-nav nav a:hover {
+  opacity: 0.6;
 }
+
 
 /* ===== TEXTO SOBRE VIDEO ===== */
 .hero-content {
