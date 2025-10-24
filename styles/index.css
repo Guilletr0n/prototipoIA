@@ -52,6 +52,13 @@ body {
   align-items: center;
 }
 
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 .top-nav .logo {
   font-family: "Space Mono", monospace;
   font-size: 1.5rem;
