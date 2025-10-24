@@ -426,3 +426,15 @@ footer {
   z-index: -1;
 }
 
+/* Línea encima del menú */
+.navbar::before {
+  content: "";
+  display: block;
+  height: 20px;       /* altura de la línea */
+  width: 100%;
+  background-color: #ff9f1c; /* color cálido similar a Tilda, cambia si quieres */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
