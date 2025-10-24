@@ -60,7 +60,7 @@ body {
 }
 
 .logo img {
-  height: 10px; /* ajusta el tamaño a tu gusto */
+  height: 20px; /* ajusta el tamaño a tu gusto */
   width: auto;  /* mantiene proporción */
   display: block;
 }
