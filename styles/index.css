@@ -105,8 +105,8 @@ nav a:hover {
   font-family: "Inter", sans-serif;
   font-size: 3rem;
   margin-bottom: 10px;
-  opacity: 0.5;
-  shadow: 0.3;
+  opacity: 0.8;
+  shadow: 0.5;
 }
 
 .hero-content p {
