@@ -12,33 +12,38 @@
 </head>
 <body>
     <header class="hero-section">
+  <!-- Video de fondo -->
   <video autoplay muted loop playsinline class="background-video">
     <source src="assets/videos/header-video.mp4" type="video/mp4">
     Tu navegador no soporta video en HTML5.
   </video>
-  <div class="hero-content">
-    <h1>Tu Título o Nombre</h1>
-    <p>Una frase o claim breve</p>
+
+  <!-- Contenedor general -->
+  <div class="overlay">
+    <div class="container header-content">
+      <a href="#" class="logo">SYNAPSE</a>
+
+      <nav>
+        <ul>
+          <li><a href="#AI Generated">AI Generated</a></li>
+          <li><a href="#Shot">Shot</a></li>
+          <li><a href="#Sound">Sound</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Texto central -->
+    <div class="hero-content">
+      <h1>Tu Título o Nombre</h1>
+      <p>Una frase o claim breve</p>
+    </div>
   </div>
 </header>
 
-    <div class="scroll-indicator" id="scrollIndicator"></div>
-    
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="#" class="logo">SYNAPSE</a>
-                
-                <!-- Desktop Navigation -->
-                <nav>
-                    <ul>
-                        <li><a href="#AI Generated">AI Generated</a></li>
-                        <li><a href="#Shot">Shot</a></li>
-                        <li><a href="#Sound">Sound</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
+<!-- Indicador de scroll -->
+<div class="scroll-indicator" id="scrollIndicator"></div>
 
                 <!-- Burger Menu Button -->
                 <div class="burger-menu" id="burgerMenu">
