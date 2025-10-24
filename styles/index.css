@@ -1,3 +1,43 @@
+.hero-section {
+  position: relative;
+  height: 100vh; /* ocupa toda la altura de la ventana */
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  object-fit: cover; /* para que no se deforme */
+  filter: brightness(0.7); /* opcional, oscurece un poco el video */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
 * {
             margin: 0;
             padding: 0;
