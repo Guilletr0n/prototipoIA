@@ -13,16 +13,7 @@
 
 <body>
 
-  <!-- === HERO SECTION CON VIDEO === -->
-  <section class="hero-section">
-    <video autoplay muted loop playsinline class="background-video">
-      <source src="assets/videos/header-video.mp4" type="video/mp4">
-      Tu navegador no soporta video en HTML5.
-    </video>
-
-    <div class="overlay">
-      <!-- NAVBAR -->
-<!-- Menú fijo superior con fondo negro -->
+<!-- Menú fijo negro -->
 <header class="top-nav">
   <div class="container header-content">
     <a href="#" class="logo">SYNAPSE</a>
@@ -38,7 +29,7 @@
   </div>
 </header>
 
-<!-- Sección del video hero -->
+<!-- Sección del hero con video -->
 <section class="hero-section">
   <video autoplay muted loop playsinline class="background-video">
     <source src="assets/videos/header-video.mp4" type="video/mp4">
@@ -53,150 +44,114 @@
   </div>
 </section>
 
+<!-- Scroll indicator -->
+<div class="scroll-indicator" id="scrollIndicator"></div>
 
-  <!-- Mobile Navigation -->
-  <div class="mobile-nav" id="mobileNav">
-    <ul>
-      <li><a href="#AI Generated">AI Generated</a></li>
-      <li><a href="#Shot">Shot</a></li>
-      <li><a href="#Sound">Sound</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
+<!-- Burger menu -->
+<div class="burger-menu" id="burgerMenu">
+  <div class="burger-line"></div>
+  <div class="burger-line"></div>
+  <div class="burger-line"></div>
+</div>
 
-  <!-- === SCROLL INDICATOR === -->
-  <div class="scroll-indicator" id="scrollIndicator"></div>
+<!-- Mobile Navigation -->
+<div class="mobile-nav" id="mobileNav">
+  <ul>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#motion">Motion</a></li>
+    <li><a href="#static">Static</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div>
 
-  <!-- === MAIN CONTENT === -->
-  <main>
-    <section class="intro-section fade-in">
-      <div class="container">
-        <h1 class="intro-title">Creative Vision</h1>
-        <p class="intro-subtitle">Digital Art & Motion Design</p>
-      </div>
-    </section>
-
-    <section class="portfolio-section" id="work">
-      <div class="container">
-        <h2 class="section-title">Featured Work</h2>
-        <div class="portfolio-grid">
-          <a href="project-creature.html" class="portfolio-item fade-in">
-            <img src="assets/portfolio-creature-BscEAkZG.jpg" alt="3D Creature Design">
-            <div class="portfolio-item-info">
-              <h3 class="portfolio-item-title">Creature Design</h3>
-              <p class="portfolio-item-category">3D Modeling</p>
-            </div>
-          </a>
-          <a href="project-architecture.html" class="portfolio-item fade-in">
-            <img src="assets/portfolio-house-CMIevJ2u.jpg" alt="Architectural Visualization">
-            <div class="portfolio-item-info">
-              <h3 class="portfolio-item-title">Modern Architecture</h3>
-              <p class="portfolio-item-category">Visualization</p>
-            </div>
-          </a>
-          <a href="project-portrait.html" class="portfolio-item fade-in">
-            <img src="assets/portfolio-portrait-Ong92Nzu.jpg" alt="Portrait Art">
-            <div class="portfolio-item-info">
-              <h3 class="portfolio-item-title">Digital Portrait</h3>
-              <p class="portfolio-item-category">Character Art</p>
-            </div>
-          </a>
-          <a href="project-infographic.html" class="portfolio-item fade-in">
-            <img src="assets/portfolio-info-BbHmDWJf.jpg" alt="Information Design">
-            <div class="portfolio-item-info">
-              <h3 class="portfolio-item-title">Info Graphics</h3>
-              <p class="portfolio-item-category">Data Visualization</p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="categories-section" id="categories">
-      <div class="container">
-        <h2 class="section-title">Explore Categories</h2>
-        <div class="categories-grid">
-          <a href="#" class="category-item fade-in" id="motion">Motion Graphics</a>
-          <a href="#" class="category-item fade-in" id="static">Static Design</a>
-          <a href="#" class="category-item fade-in">3D Modeling</a>
-          <a href="#" class="category-item fade-in">Visualization</a>
-          <a href="#" class="category-item fade-in">Branding</a>
-          <a href="#" class="category-item fade-in">Experiential</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- === FOOTER === -->
-  <footer id="contact">
+<main>
+  <section class="intro-section fade-in">
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-section" id="about">
-          <h3>About</h3>
-          <p>Creative professional specializing in digital art, motion design, and visual storytelling. Passionate about pushing the boundaries of visual communication.</p>
-        </div>
-        <div class="footer-section" id="services">
-          <h3>Services</h3>
-          <p><a href="#">Motion Graphics</a></p>
-          <p><a href="#">3D Visualization</a></p>
-          <p><a href="#">Brand Design</a></p>
-          <p><a href="#">Digital Art</a></p>
-        </div>
-        <div class="footer-section">
-          <h3>Contact</h3>
-          <p><a href="mailto:hello@portfolio.com">hello@portfolio.com</a></p>
-          <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
-          <p><a href="#">LinkedIn</a></p>
-          <p><a href="#">Instagram</a></p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 Creative Portfolio. All rights reserved.</p>
+      <h1 class="intro-title">Creative Vision</h1>
+      <p class="intro-subtitle">Digital Art & Motion Design</p>
+    </div>
+  </section>
+
+  <section class="portfolio-section" id="work">
+    <div class="container">
+      <h2 class="section-title">Featured Work</h2>
+      <div class="portfolio-grid">
+        <a href="project-creature.html" class="portfolio-item fade-in">
+          <img src="assets/portfolio-creature-BscEAkZG.jpg" alt="3D Creature Design">
+          <div class="portfolio-item-info">
+            <h3 class="portfolio-item-title">Creature Design</h3>
+            <p class="portfolio-item-category">3D Modeling</p>
+          </div>
+        </a>
+        <a href="project-architecture.html" class="portfolio-item fade-in">
+          <img src="assets/portfolio-house-CMIevJ2u.jpg" alt="Architectural Visualization">
+          <div class="portfolio-item-info">
+            <h3 class="portfolio-item-title">Modern Architecture</h3>
+            <p class="portfolio-item-category">Visualization</p>
+          </div>
+        </a>
+        <a href="project-portrait.html" class="portfolio-item fade-in">
+          <img src="assets/portfolio-portrait-Ong92Nzu.jpg" alt="Portrait Art">
+          <div class="portfolio-item-info">
+            <h3 class="portfolio-item-title">Digital Portrait</h3>
+            <p class="portfolio-item-category">Character Art</p>
+          </div>
+        </a>
+        <a href="project-infographic.html" class="portfolio-item fade-in">
+          <img src="assets/portfolio-info-BbHmDWJf.jpg" alt="Information Design">
+          <div class="portfolio-item-info">
+            <h3 class="portfolio-item-title">Info Graphics</h3>
+            <p class="portfolio-item-category">Data Visualization</p>
+          </div>
+        </a>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <!-- === SCRIPTS === -->
-  <script>
-    // === Burger Menu ===
-    const burgerMenu = document.getElementById('burgerMenu');
-    const mobileNav = document.getElementById('mobileNav');
+  <section class="categories-section" id="categories">
+    <div class="container">
+      <h2 class="section-title">Explore Categories</h2>
+      <div class="categories-grid">
+        <a href="#" class="category-item fade-in" id="motion">Motion Graphics</a>
+        <a href="#" class="category-item fade-in" id="static">Static Design</a>
+        <a href="#" class="category-item fade-in">3D Modeling</a>
+        <a href="#" class="category-item fade-in">Visualization</a>
+        <a href="#" class="category-item fade-in">Branding</a>
+        <a href="#" class="category-item fade-in">Experiential</a>
+      </div>
+    </div>
+  </section>
+</main>
 
-    burgerMenu.addEventListener('click', () => {
-      burgerMenu.classList.toggle('active');
-      mobileNav.classList.toggle('active');
-      document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : 'auto';
-    });
-
-    document.querySelectorAll('.mobile-nav a').forEach(link => {
-      link.addEventListener('click', () => {
-        burgerMenu.classList.remove('active');
-        mobileNav.classList.remove('active');
-        document.body.style.overflow = 'auto';
-      });
-    });
-
-    // === Scroll Indicator ===
-    window.addEventListener('scroll', () => {
-      const scrollIndicator = document.getElementById('scrollIndicator');
-      const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-      scrollIndicator.style.width = scrollPercent + '%';
-    });
-
-    // === Fade in ===
-    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.animationDelay = Math.random() * 0.3 + 's';
-          entry.target.classList.add('fade-in');
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('.portfolio-item, .category-item').forEach(item => observer.observe(item));
-  </script>
+<footer id="contact">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section" id="about">
+        <h3>About</h3>
+        <p>Creative professional specializing in digital art, motion design, and visual storytelling. Passionate about pushing the boundaries of visual communication.</p>
+      </div>
+      <div class="footer-section" id="services">
+        <h3>Services</h3>
+        <p><a href="#">Motion Graphics</a></p>
+        <p><a href="#">3D Visualization</a></p>
+        <p><a href="#">Brand Design</a></p>
+        <p><a href="#">Digital Art</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p><a href="mailto:hello@portfolio.com">hello@portfolio.com</a></p>
+        <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+        <p><a href="#">LinkedIn</a></p>
+        <p><a href="#">Instagram</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Creative Portfolio. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
